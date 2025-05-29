@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #a2c3a4; 
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  color: #102d19; 
+}
+
+.app-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  color: #264d3d;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f5fff8;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(34, 139, 34, 0.25);
+}
+
+.card:nth-child(odd) {
+  transform: translateX(-200px);
+}
+
+.card:nth-child(even) {
+  transform: translateX(200px);
+}
+
+.card-image {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card-content h2 {
+  margin-top: 0.5rem;
+  color: #345e4d;
+}
+
+.role {
+  color: #5e947b;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: #4e665c;
+}
+
+.leaf-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.falling-leaf {
+  position: absolute;
+  top: -100px;
+  width: 40px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 10%;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.profile-slide {
+  scroll-snap-align: center;
+  flex: 0 0 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.profile-slide:hover {
+  transform: scale(1);
+}
