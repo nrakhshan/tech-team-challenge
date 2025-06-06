@@ -1,0 +1,60 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(-60deg,
+  #6a0dad 0%,
+  #4B0082 25%,
+  #8a2be2 50%,
+  #5e1b9b 75%,
+  #7d26cd 100%);
+  background-size: 100% 100%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1, header p {
+  opacity: var(--header-opacity, 1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+}
+
+header h1:hover {
+  background: linear-gradient(90deg, #d1b3ff, #a16ae8, #5e1b9b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.05);
+}
+
+header p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #b399cb;
+  margin-top: 0;
+}
+
+
