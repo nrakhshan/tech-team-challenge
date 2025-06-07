@@ -1,0 +1,44 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+/* Global CSS Variables */
+:root {
+  /* colors*/
+  --primary-text: rgb(243, 243, 243);
+  --background: #5e1975;
+  --darkbackground: #4d1261;
+
+  /* spacing */
+  --margin-xxs: 0.25rem;
+  --margin-xs: 0.5rem;
+  --margin-s: 0.75rem;
+  --margin-m: 1rem;
+  --margin-l: 1.25rem;
+  --margin-xl: 1.75rem;
+  --margin-xxl: 2.5rem;
+  --margin-xxxl: 4rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  font-family: "Texturina";
+  text-align: center;
+  color: var(--primary-text);
+}
+
+h1 {
+  margin-block-start: var(--margin-xs);
+  margin-block-end: var(--margin-s);
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
